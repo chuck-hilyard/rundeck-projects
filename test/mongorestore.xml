@@ -1,5 +1,13 @@
 <joblist>
   <job>
+    <context>
+      <options preserveOrder='true'>
+        <option name='sourceBackup' required='true' value='0000-00-00-0000'>
+          <description>restore from proposal-tool-v2-db-prod-usa-yyyy-mm-dd-hhmm to proposal-tool-v2-db-dev-usa</description>
+          <label>yyyy-mm-dd-hhmm</label>
+        </option>
+      </options>
+    </context>
     <defaultTab>summary</defaultTab>
     <description>restoremongo    </description>
     <executionEnabled>true</executionEnabled>
@@ -7,16 +15,29 @@
     <loglevel>INFO</loglevel>
     <name>restoremongo</name>
     <nodeFilterEditable>false</nodeFilterEditable>
+    <notification>
+      <onfailure>
+        <email recipients='chuck.hilyard@gannett.com' subject='test mongo' />
+      </onfailure>
+      <onstart>
+        <email recipients='chuck.hilyard@gannett.com' subject='test mongo' />
+      </onstart>
+      <onsuccess>
+        <email recipients='chuck.hilyard@gannett.com' subject='test mongo' />
+      </onsuccess>
+    </notification>
+    <notifyAvgDurationThreshold />
     <schedule>
       <month month='*' />
       <time hour='10' minute='45' seconds='0' />
       <weekday day='*' />
       <year year='*' />
     </schedule>
-    <scheduleEnabled>true</scheduleEnabled>
+    <scheduleEnabled>false</scheduleEnabled>
     <sequence keepgoing='false' strategy='node-first'>
       <command>
-        <script><![CDATA[aws s3 cp s3://somebucket/someobject .]]></script>
+        <description>download stuff from s3</description>
+        <script><![CDATA[aws s3 cp --recursive s3://proposal-tool-v2-db-qa-usa/backups/2018-12-04-1837 .]]></script>
         <scriptargs />
       </command>
     </sequence>
