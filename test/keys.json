@@ -1,0 +1,15 @@
+{
+	"path": "keys/github_key",
+	"type": "file",
+	"name": "github_key",
+	"url": "http://localhost:4440/api/27/storage/keys/github_key",
+	"meta": {
+		"Rundeck-content-type": "application/octet-stream",
+		"Rundeck-content-creation-time": "2018-12-12T21:38:21Z",
+		"Rundeck-content-modify-time": "2018-12-12T21:38:21Z",
+		"Rundeck-auth-created-username": "admin",
+		"Rundeck-auth-modified-username": "admin",
+		"Rundeck-key-type": "private",
+		"Rundeck-content-mask": "content"
+	}
+}

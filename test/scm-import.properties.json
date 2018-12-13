@@ -1,0 +1,21 @@
+{
+	"config": {
+		"url": "git@github.com:chuck-hilyard/rundeck-jobs.git",
+		"fetchAutomatically": "true",
+		"pullAutomatically": "true",
+		"dir": "/var/rundeck/projects/test/scm",
+		"filePattern": ".*\\.xml",
+		"importUuidBehavior": "preserve",
+		"useFilePattern": "true",
+		"strictHostKeyChecking": "no",
+		"sshPrivateKeyPath": "keys/github_key",
+		"format": "xml",
+		"branch": "master",
+		"gitPasswordPath": "",
+		"pathTemplate": "${job.group}${job.name}-${job.id}.${config.format}"
+	},
+	"enabled": false,
+	"integration": "import",
+	"project": "test",
+	"type": "git-import"
+}

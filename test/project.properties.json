@@ -1,0 +1,14 @@
+{
+	"project.disable.schedule": "false",
+	"name": "test",
+	"project.jobs.gui.groupExpandLevel": "1",
+	"project.ssh-authentication": "privateKey",
+	"service.NodeExecutor.default.provider": "local",
+	"project.label": "test",
+	"project.disable.executions": "false",
+	"plugin.script-copy.default.command": "execution.py",
+	"project.ssh-keypath": "/var/lib/rundeck/.ssh/id_rsa",
+	"service.FileCopier.default.provider": "script-copy",
+	"project.description": "test",
+	"resources.source.1.type": "local"
+}

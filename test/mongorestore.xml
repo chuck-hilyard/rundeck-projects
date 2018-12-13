@@ -1,0 +1,25 @@
+<joblist>
+  <job>
+    <defaultTab>summary</defaultTab>
+    <description>restoremongo    </description>
+    <executionEnabled>true</executionEnabled>
+    <id></id>
+    <loglevel>INFO</loglevel>
+    <name>restoremongo</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <schedule>
+      <month month='*' />
+      <time hour='10' minute='45' seconds='0' />
+      <weekday day='*' />
+      <year year='*' />
+    </schedule>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <script><![CDATA[aws s3 cp s3://somebucket/someobject .]]></script>
+        <scriptargs />
+      </command>
+    </sequence>
+    <uuid></uuid>
+  </job>
+</joblist>
